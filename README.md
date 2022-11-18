@@ -1,4 +1,4 @@
-# BILINGUISMO - DESPLIEGUE CON DOCKER EN EL TUMLAB
+# lms_tumlab
 
 ## Contenido
   * [Descripción](#descripcion)
