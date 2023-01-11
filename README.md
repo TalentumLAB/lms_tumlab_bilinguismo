@@ -142,5 +142,5 @@ Para crear la base de datos y un usuario para accederla, se deben ejecutar los s
 Para el despliegue de la solución se deben ejecutar el siguiente comando:
 
 ```bash
-    docker-compose -p "bilinguismo" -f "docker-compose-prod.yml" up
+    docker-compose -p "bilinguismo" up
 ```
