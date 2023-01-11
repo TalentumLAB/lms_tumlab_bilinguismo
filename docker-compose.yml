@@ -113,7 +113,7 @@ services:
       MOODLE_DATABASE_PORT_NUMBER: 3306
       MOODLE_DATABASE_USER: bilinguismo-db-user
       MOODLE_DATABASE_PASSWORD: Bilinguismo2022*
-      MOODLE_DATABASE_NAME: moodle_db_andres
+      MOODLE_DATABASE_NAME: moodle_db
       MOODLE_SKIP_BOOTSTRAP: true
     ports:
       - '5000:8080'
