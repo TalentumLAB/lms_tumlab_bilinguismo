@@ -733,17 +733,17 @@
       "clientId": "talentum-reporter-backend",
       "name": "Reporter Backend",
       "description": "Restful API for the Reporter component",
-      "rootUrl": "http://192.168.121.150:3000",
-      "adminUrl": "http://192.168.121.150:3000",
+      "rootUrl": "http://tumlab.local:3000",
+      "adminUrl": "http://tumlab.local:3000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "http://192.168.121.150:3000/*"
+        "http://tumlab.local:3000/*"
       ],
       "webOrigins": [
-        "http://192.168.121.150:3000"
+        "http://tumlab.local:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -799,19 +799,19 @@
       "id": "aaecb19b-ddb5-4f31-83ee-d02c5013aa9r",
       "clientId": "talentum-moodle",
       "name": "Moodle",
-      "rootUrl": "http://192.168.121.150:5000",
-      "adminUrl": "http://192.168.121.150:5000",
-      "baseUrl": "http://192.168.121.150:5000",
+      "rootUrl": "http://tumlab.local:5000",
+      "adminUrl": "http://tumlab.local:5000",
+      "baseUrl": "http://tumlab.local:5000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "726a597f-2bf2-409d-aad6-f5a0789d90r5",
       "redirectUris": [
-        "http://192.168.121.150:5000/*"
+        "http://tumlab.local:5000/*"
       ],
       "webOrigins": [
-        "http://192.168.121.150:5000"
+        "http://tumlab.local:5000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -867,19 +867,19 @@
       "id": "bbecb19b-ddb5-4f31-82ee-d02c5013aa7e",
       "clientId": "talentum-reporter-frontend",
       "name": "Reporter",
-      "rootUrl": "http://192.168.121.150:3000",
-      "adminUrl": "http://192.168.121.150:3000",
-      "baseUrl": "http://192.168.121.150:3000",
+      "rootUrl": "http://tumlab.local:3000",
+      "adminUrl": "http://tumlab.local:3000",
+      "baseUrl": "http://tumlab.local:3000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "616a597f-2af2-409d-bbd6-f5a0787d90d7",
       "redirectUris": [
-        "http://192.168.121.150:3000/*"
+        "http://tumlab.local:3000/*"
       ],
       "webOrigins": [
-        "http://192.168.121.150:3000"
+        "http://tumlab.local:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -943,11 +943,11 @@
       "secret": "a1f4f7d0-d755-4a43-8638-197c8519fe3c",
       "redirectUris": [
         "http://0.0.0.0:8088/*",
-        "http://192.168.121.150:8088/*"
+        "http://tumlab.local:8088/*"
       ],
       "webOrigins": [
         "http://0.0.0.0:8088",
-        "http://192.168.121.150:8088"
+        "http://tumlab.local:8088"
       ],
       "notBefore": 0,
       "bearerOnly": false,
