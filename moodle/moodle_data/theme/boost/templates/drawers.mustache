@@ -90,12 +90,26 @@
         {{/ theme_boost/drawer}}
     {{/hasblocks}}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
-        <div id="topofscroll" class="main-inner">
+        <div id="topofscroll" class="main-inner container-fluid">
+
+            <div class="page-header-wrapper has-course-header-image {{iscourse}}">
+			    <div class="course-header-bg">
+                
+                    <div class="course-header-image" style="background-image: url('{{imagecourse}}'); -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover; background-repeat: no-repeat;  background-position: center; width:100%; height: 100%;">
+                    </div>
+
+                    <div class="mask"></div>
+		        </div>
+
+                {{{ output.full_header }}}
+
+            </div>
+
             <div class="drawer-toggles d-flex">
                 {{#courseindex}}
                     <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
                         <button
-                            class="btn icon-no-margin"
+                            class="btn icon-no-margin talentum-menu-course"
                             data-toggler="drawers"
                             data-action="toggle"
                             data-target="theme_boost-drawers-courseindex"
@@ -111,7 +125,7 @@
                 {{#hasblocks}}
                     <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
                         <button
-                            class="btn icon-no-margin"
+                            class="btn icon-no-margin talentum-menu-course"
                             data-toggler="drawers"
                             data-action="toggle"
                             data-target="theme_boost-drawers-blocks"
@@ -126,9 +140,9 @@
                     </div>
                 {{/hasblocks}}
             </div>
-            {{{ output.full_header }}}
+            <!--{{{ output.full_header }}}-->
             {{#secondarymoremenu}}
-                <div class="secondary-navigation d-print-none">
+                <div class="secondarynavigation d-print-none">
                     {{> core/moremenu}}
                 </div>
             {{/secondarymoremenu}}
@@ -163,7 +177,7 @@
                 </div>
             </div>
         </div>
-        {{> theme_boost/footer }}
+        {{> theme_boost/footer }} 
     </div>
     {{{ output.standard_after_main_region_html }}}
 </div>

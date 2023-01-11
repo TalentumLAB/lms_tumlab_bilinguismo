@@ -238,7 +238,7 @@ class format_talentum_renderer extends format_topics_renderer{
 
                 
 
-                $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 p-0 module-images-dashboard"]);
+                $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 p-0 talentum-module-images-dashboard"]);
                 $modulecardhtml .= html_writer::start_tag('a', ['onclick' => $onclick]);
                 $talentum_images_module_1 = 'format/talentum/img/M1.png';
                 $img_Talentum_1 =  '<img src="' . $talentum_images_module_1  . '" id="module-image-1" />';
@@ -296,12 +296,12 @@ class format_talentum_renderer extends format_topics_renderer{
                 
                 if($module == 2){
                 
-                    $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 d-flex"]);
+                    $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 d-flex mt-4"]);
                     $modulecardhtml .= html_writer::tag('h5','Módulos estudiantes',['class' => "talentum-title-dashboard"]);
                     $modulecardhtml .= html_writer::end_tag('div');
                 }
                 
-                $modulecardhtml .= html_writer::start_tag('div', ['class' => "card talentum-card-module   col-md-3 ",'style'=>'display:flex;margin-left: 0.2rem;margin-right: 0.5rem;', 'id'=>'talentum-card-module-'.$module]);
+                $modulecardhtml .= html_writer::start_tag('div', ['class' => "card talentum-card-module   col-md-3 ",'style'=>'display:flex;margin-left: 0.2rem;margin-right: 1.5rem;', 'id'=>'talentum-card-module-'.$module]);
             
             
                 $act = $percent[$section]->section;
@@ -327,7 +327,7 @@ class format_talentum_renderer extends format_topics_renderer{
                     $onclick = false;
                 }
                 
-                $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 p-0 module-images-dashboard"]);
+                $modulecardhtml .= html_writer::start_tag('div', ['class' => "col-md-12 p-0 talentum-module-images-dashboard"]);
                 $modulecardhtml .= html_writer::start_tag('a', ['onclick' => $onclick]);
                 $talentum_images_modules = 'format/talentum/img/M'.$module.'.png';
                 $img_Talentum_modules = '<img src="' . $talentum_images_modules  . '" id="module-image-'.$module.'" />';
@@ -421,7 +421,7 @@ class format_talentum_renderer extends format_topics_renderer{
             $course_btn_back_lang = get_string('back', 'format_talentum');
             $onbackclick = 'M.format_talentum.back(' . $course->id . ')';
             $backnavhtml .= html_writer::start_tag('nav', ['class' => "navbar sticky-top navbar-light talentum-back-navbar", 'id' => 'talentum-back-nav-'.$modules]);
-            $backnavhtml .= html_writer::start_tag('a',  ['class' => 'btn btn-secondary btn-sm talentum-back-nav', 'onclick' => $onbackclick]);
+            $backnavhtml .= html_writer::start_tag('a',  ['class' => 'btn btn-primary btn-sm talentum-back-nav', 'onclick' => $onbackclick]);
             $backnavhtml .= html_writer::tag('i', '', ['class' => 'fa fa-arrow-left']);
             $backnavhtml .= $course_btn_back_lang;
             $backnavhtml .= html_writer::end_tag('a');

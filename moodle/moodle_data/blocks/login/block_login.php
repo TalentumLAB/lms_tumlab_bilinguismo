@@ -64,7 +64,7 @@ class block_login extends block_base {
                 $strusername = get_string('usernameemail');
             }
 
-            $this->content->text .= "\n".'<form class="loginform" id="login" method="post" action="'.get_login_url().'">';
+            $this->content->text .= "\n".'<form class="loginform" id="login"  method="post" action="'.get_login_url().'">';
 
             $this->content->text .= '<div class="form-group">';
             $this->content->text .= '<label for="login_username">'.$strusername.'</label>';

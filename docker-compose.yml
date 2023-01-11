@@ -23,16 +23,16 @@ services:
       KEYCLOAK_CREATE_ADMIN_USER: true
       KEYCLOAK_ADMIN_USER: admin
       KEYCLOAK_ADMIN_PASSWORD: password
-      #KEYCLOAK_MANAGEMENT_USER: manager
-      #KEYCLOAK_MANAGEMENT_PASSWORD: password
+      KEYCLOAK_MANAGEMENT_USER: manager
+      KEYCLOAK_MANAGEMENT_PASSWORD: password
 
-      #KEYCLOAK_DATABASE_VENDOR: POSTGRES
+      KEYCLOAK_DATABASE_VENDOR: POSTGRES
       KEYCLOAK_DATABASE_HOST: host.docker.internal
       KEYCLOAK_DATABASE_PORT: 5432
       KEYCLOAK_DATABASE_NAME: keycloak
       KEYCLOAK_DATABASE_USER: bilinguismo_db_user
       KEYCLOAK_DATABASE_PASSWORD: Bilinguismo2022*
-      #KEYCLOAK_DATABASE_SCHEMA: public
+      KEYCLOAK_DATABASE_SCHEMA: public
 
       KEYCLOAK_HTTP_PORT: 8080
       KEYCLOAK_HTTPS_PORT: 8443
@@ -43,29 +43,27 @@ services:
       KC_HTTP_RELATIVE_PATH: "/auth"
       KEYCLOAK_EXTRA_ARGS: "--import-realm"
 
-      #KEYCLOAK_LOG_LEVEL: INFO
-      #THEME_NAME: talentum
+      KEYCLOAK_LOG_LEVEL: INFO
+      THEME_NAME: aulas-valle-v1.0.0
     ports:
       - 8080:8080
       - 8443:8443
-
     volumes:
-      - ./keycloak20:/opt/bitnami/keycloak/data/import
-      #- ./keycloak20/init-scripts:/docker-entrypoint-initdb.d
-      #- './keycloak20/theme:/opt/bitnami/keycloak/themes/mynewtheme'
+      - ./keycloak/config:/opt/bitnami/keycloak/data/import
+      - ./keycloak/theme:/opt/bitnami/keycloak/providers
     depends_on:
       - mailhog
     networks:
       - bilinguismo-net
 
   backend:
-    image: bilinguismotalentum/backend:0.1.0
+    image: bilinguismotalentum/backend:1.0.0
     container_name: talentum_reporter_backend
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
-      JWKS_URI: http://tumlab.local:8080/auth/realms/talentum/protocol/openid-connect/certs
+      JWKS_URI: http://192.168.0.227:8080/auth/realms/talentum/protocol/openid-connect/certs
       DB_HOST: host.docker.internal
       DB_PORT: 3306
       DB_USER: bilinguismo-db-user
@@ -84,17 +82,17 @@ services:
       - bilinguismo-net
 
   frontend:
-    image: bilinguismotalentum/frontend:0.1.1
+    image: bilinguismotalentum/frontend:1.0.0
     container_name: talentum_reporter_frontend
     restart: always
     environment:
       KEYCLOAK_CLIENT_ID: talentum-reporter-frontend
       KEYCLOAK_CLIENT_SECRET: 616a597f-2af2-409d-bbd6-f5a0787d90d7
-      KEYCLOAK_HOST: http://tumlab.local:8080
+      KEYCLOAK_HOST: http://192.168.0.227:8080
       KEYCLOAK_REALM: talentum
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://tumlab.local:4000
-      NEXTAUTH_URL: http://tumlab.local:3000
+      NEXT_PUBLIC_BACKEND: http://192.168.0.227:4000
+      NEXTAUTH_URL: http://192.168.0.227:3000
     ports: 
       - "3000:3000"
     depends_on:
@@ -115,7 +113,7 @@ services:
       MOODLE_DATABASE_PORT_NUMBER: 3306
       MOODLE_DATABASE_USER: bilinguismo-db-user
       MOODLE_DATABASE_PASSWORD: Bilinguismo2022*
-      MOODLE_DATABASE_NAME: moodle_db
+      MOODLE_DATABASE_NAME: moodle_db_andres
       MOODLE_SKIP_BOOTSTRAP: true
     ports:
       - '5000:8080'

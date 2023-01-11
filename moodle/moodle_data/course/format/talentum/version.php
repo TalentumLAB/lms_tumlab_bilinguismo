@@ -30,4 +30,4 @@ $plugin->requires = 2018120300;  //moodle 3.6
 $plugin->component = 'format_talentum';
 $plugin->maturity = MATURITY_STABLE;
 // $plugin->release = '(Build: 2020270100) v1.4';
-$plugin->version = 2022040894; // YYYYDDMMHH (year, day,month, 24-hr time) 2020041900
+$plugin->version = 2022040906; // YYYYDDMMHH (year, day,month, 24-hr time) 2020041900

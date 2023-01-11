@@ -45,3 +45,9 @@ function activeButton(){
 
     buttonLoad.removeAttribute('disabled');
 }
+
+function activeButtonAll(){
+    var buttonLoad = document.querySelector('#buttonLoadStudentsAll');
+
+    buttonLoad.removeAttribute('disabled');
+}

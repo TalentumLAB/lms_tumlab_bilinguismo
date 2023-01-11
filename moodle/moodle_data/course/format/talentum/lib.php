@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Talentum_Formatt_renderer
+ * Talentum_Format_renderer
  *
  * @package    Talentum_Format
  * @author     Talentum

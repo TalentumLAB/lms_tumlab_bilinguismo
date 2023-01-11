@@ -23,6 +23,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
+global $CFG,$DB;
 
 require_once($CFG->libdir . '/behat/lib.php');
 require_once($CFG->dirroot . '/course/lib.php');
@@ -86,6 +87,47 @@ $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settin
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);
 
+
+
+
+$courseid = $PAGE->course->id;
+$course = $DB->get_record('course', array('id' => $courseid));
+
+
+$courselist = new core_course_list_element($course);
+$contentimages = $contentfiles = '';
+foreach ($courselist->get_course_overviewfiles() as $file) {
+    $isimage = $file->is_valid_image();
+    $url = moodle_url::make_file_url("$CFG->wwwroot/pluginfile.php",
+        '/' . $file->get_contextid() . '/' . $file->get_component() . '/' .
+        $file->get_filearea() . $file->get_filepath() . $file->get_filename(), !$isimage);
+    
+    if ($isimage) {
+        // $contentimages .= html_writer::tag('div',
+        //     html_writer::empty_tag('img', ['src' => $url]),
+        //     ['class' => 'courseimage']);
+        $contentimages .= $url;
+    } else {
+        $image = $this->output->pix_icon(file_file_icon($file, 24), $file->get_filename(), 'moodle');
+        $filename = html_writer::tag('span', $image, ['class' => 'fp-icon']).
+            html_writer::tag('span', $file->get_filename(), ['class' => 'fp-filename']);
+        // $contentfiles .= html_writer::tag('span',
+        //     html_writer::link($url, $filename),
+        //     ['class' => 'coursefile fp-filename-icon']);
+        $contentfiles .= $url;
+    }
+}
+
+$imagecourse = $contentimages . $contentfiles;
+$iscourse = '';
+if($courseid != 1){
+    $iscourse = 'taletum-course-bg-image';
+}else{
+    $iscourse = 'taletum-no-course-bg-image';
+}
+
+
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -105,7 +147,9 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,
     'headercontent' => $headercontent,
-    'addblockbutton' => $addblockbutton
+    'addblockbutton' => $addblockbutton,
+    'imagecourse'=> $imagecourse,
+    'iscourse'=> $iscourse
 ];
 
 echo $OUTPUT->render_from_template('theme_boost/drawers', $templatecontext);
