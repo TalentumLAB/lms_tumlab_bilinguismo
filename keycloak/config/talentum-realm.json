@@ -1,6 +1,6 @@
 {
-  "id": "talentum",
-  "realm": "talentum",
+  "id": "aulas-valle",
+  "realm": "aulas-valle",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -48,7 +48,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "talentum",
+        "containerId": "aulas-valle",
         "attributes": {}
       },
       {
@@ -56,7 +56,7 @@
         "name": "uma_authorization",
         "composite": false,
         "clientRole": false,
-        "containerId": "talentum",
+        "containerId": "aulas-valle",
         "attributes": {}
       },
       {
@@ -65,7 +65,7 @@
         "description": "Demo role",
         "composite": false,
         "clientRole": false,
-        "containerId": "talentum",
+        "containerId": "aulas-valle",
         "attributes": {}
       }
     ],
@@ -433,7 +433,7 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/talentum/account/",
+      "baseUrl": "/realms/aulas-valle/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -444,7 +444,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/realms/talentum/account/*"
+        "/realms/aulas-valle/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -497,14 +497,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/talentum/account/",
+      "baseUrl": "/realms/aulas-valle/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "31348d01-14ea-43ff-9eeb-8b5702d5c68a",
       "redirectUris": [
-        "/realms/talentum/account/*"
+        "/realms/aulas-valle/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -669,14 +669,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/talentum/console/",
+      "baseUrl": "/admin/aulas-valle/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "ce562a89-33ce-4b1a-ab54-a5971bed722b",
       "redirectUris": [
-        "/admin/talentum/console/*"
+        "/admin/aulas-valle/console/*"
       ],
       "webOrigins": [
         "+"
@@ -730,20 +730,20 @@
     },
     {
       "id": "91b75da3-0ab7-4be0-8291-20b7ef063c55",
-      "clientId": "talentum-reporter-backend",
+      "clientId": "si-backend",
       "name": "Reporter Backend",
       "description": "Restful API for the Reporter component",
-      "rootUrl": "http://tumlab.local:3000",
-      "adminUrl": "http://tumlab.local:3000",
+      "rootUrl": "http://192.168.20.27:3000",
+      "adminUrl": "http://192.168.20.27:3000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "http://tumlab.local:3000/*"
+        "http://192.168.20.27:3000/*"
       ],
       "webOrigins": [
-        "http://tumlab.local:3000"
+        "http://192.168.20.27:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -797,21 +797,21 @@
     },
     {
       "id": "aaecb19b-ddb5-4f31-83ee-d02c5013aa9r",
-      "clientId": "talentum-moodle",
+      "clientId": "lms",
       "name": "Moodle",
-      "rootUrl": "http://tumlab.local:5000",
-      "adminUrl": "http://tumlab.local:5000",
-      "baseUrl": "http://tumlab.local:5000",
+      "rootUrl": "http://192.168.20.27:5000",
+      "adminUrl": "http://192.168.20.27:5000",
+      "baseUrl": "http://192.168.20.27:5000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "726a597f-2bf2-409d-aad6-f5a0789d90r5",
       "redirectUris": [
-        "http://tumlab.local:5000/*"
+        "http://192.168.20.27:5000/*"
       ],
       "webOrigins": [
-        "http://tumlab.local:5000"
+        "http://192.168.20.27:5000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -865,21 +865,21 @@
     },
     {
       "id": "bbecb19b-ddb5-4f31-82ee-d02c5013aa7e",
-      "clientId": "talentum-reporter-frontend",
+      "clientId": "si-frontend",
       "name": "Reporter",
-      "rootUrl": "http://tumlab.local:3000",
-      "adminUrl": "http://tumlab.local:3000",
-      "baseUrl": "http://tumlab.local:3000",
+      "rootUrl": "http://192.168.20.27:3000",
+      "adminUrl": "http://192.168.20.27:3000",
+      "baseUrl": "http://192.168.20.27:3000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "616a597f-2af2-409d-bbd6-f5a0787d90d7",
       "redirectUris": [
-        "http://tumlab.local:3000/*"
+        "http://192.168.20.27:3000/*"
       ],
       "webOrigins": [
-        "http://tumlab.local:3000"
+        "http://192.168.20.27:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -909,75 +909,6 @@
         "backchannel.logout.session.required": "true",
         "client_credentials.use_refresh_token": "false",
         "saml_force_name_id_format": "false",
-        "saml.client.signature": "false",
-        "tls.client.certificate.bound.access.tokens": "false",
-        "saml.authnstatement": "false",
-        "display.on.consent.screen": "false",
-        "saml.onetimeuse.condition": "false"
-      },
-      "authenticationFlowBindingOverrides": {},
-      "fullScopeAllowed": true,
-      "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "web-origins",
-        "profile",
-        "roles",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "offline_access",
-        "microprofile-jwt"
-      ]
-    },
-    {
-      "id": "a8dce64f-dfce-4b5d-a304-882e53000d7c",
-      "clientId": "talentum-superset",
-      "rootUrl": "http://0.0.0.0:8088",
-      "adminUrl": "http://0.0.0.0:8088",
-      "surrogateAuthRequired": false,
-      "enabled": true,
-      "alwaysDisplayInConsole": false,
-      "clientAuthenticatorType": "client-secret",
-      "secret": "a1f4f7d0-d755-4a43-8638-197c8519fe3c",
-      "redirectUris": [
-        "http://0.0.0.0:8088/*",
-        "http://tumlab.local:8088/*"
-      ],
-      "webOrigins": [
-        "http://0.0.0.0:8088",
-        "http://tumlab.local:8088"
-      ],
-      "notBefore": 0,
-      "bearerOnly": false,
-      "consentRequired": false,
-      "standardFlowEnabled": true,
-      "implicitFlowEnabled": false,
-      "directAccessGrantsEnabled": true,
-      "serviceAccountsEnabled": false,
-      "publicClient": false,
-      "frontchannelLogout": false,
-      "protocol": "openid-connect",
-      "attributes": {
-        "id.token.as.detached.signature": "false",
-        "saml.assertion.signature": "false",
-        "saml.force.post.binding": "false",
-        "saml.multivalued.roles": "false",
-        "saml.encrypt": "false",
-        "login_theme": "aulas-valle-v1.0.0",
-        "oauth2.device.authorization.grant.enabled": "false",
-        "backchannel.logout.revoke.offline.tokens": "false",
-        "saml.server.signature": "false",
-        "saml.server.signature.keyinfo.ext": "false",
-        "use.refresh.tokens": "true",
-        "exclude.session.state.from.auth.response": "false",
-        "oidc.ciba.grant.enabled": "false",
-        "saml.artifact.binding": "false",
-        "backchannel.logout.session.required": "true",
-        "client_credentials.use_refresh_token": "false",
-        "saml_force_name_id_format": "false",
-        "require.pushed.authorization.requests": "false",
         "saml.client.signature": "false",
         "tls.client.certificate.bound.access.tokens": "false",
         "saml.authnstatement": "false",

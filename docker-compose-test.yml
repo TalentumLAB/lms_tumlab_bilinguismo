@@ -4,7 +4,7 @@ services:
 
   keycloak_db:
     image: docker.io/postgres:13
-    container_name: talentum_keycloak_db
+    container_name: aulas_valle_keycloak_db
     restart: always
     environment:
       POSTGRES_DB: keycloak
@@ -13,22 +13,22 @@ services:
     ports:
       - 5433:5432
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   mailhog:
     image: mailhog/mailhog:latest
-    container_name: talentum_mailhog
+    container_name: aulas_valle_mailhog
     restart: always
     logging:
       driver: 'none'
     ports:
       - 8025:8025
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   keycloak:
     image: docker.io/bitnami/keycloak:20
-    container_name: talentum_keycloak
+    container_name: aulas_valle_keycloak
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -69,11 +69,11 @@ services:
       - keycloak_db
       - mailhog
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   databases:
     image: mysql:8.0.31
-    container_name: talentum_databases
+    container_name: aulas_valle_databases
     restart: always
     volumes:
       - ./databases/local/:/docker-entrypoint-initdb.d/
@@ -85,14 +85,14 @@ services:
     ports:
       - "3307:3306"
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   backend:
     image: bilinguismotalentum/backend:1.0.0
-    container_name: talentum_reporter_backend
+    container_name: aulas_valle_reporter_backend
     restart: always
     environment:
-      JWKS_URI: http://192.168.121.150:8080/auth/realms/talentum/protocol/openid-connect/certs
+      JWKS_URI: http://192.168.20.27:8080/auth/realms/aulas-valle/protocol/openid-connect/certs
       DB_HOST: databases
       DB_PORT: 3306
       DB_USER: bilinguismo-user
@@ -110,31 +110,31 @@ services:
       - keycloak_db
       - databases
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   frontend:
     image: bilinguismotalentum/frontend:1.0.0
-    container_name: talentum_reporter_frontend
+    container_name: aulas_valle_reporter_frontend
     restart: always
     environment:
-      KEYCLOAK_CLIENT_ID: talentum-reporter-frontend
+      KEYCLOAK_CLIENT_ID: si-frontend
       KEYCLOAK_CLIENT_SECRET: 616a597f-2af2-409d-bbd6-f5a0787d90d7
-      KEYCLOAK_HOST: http://192.168.121.150:8080
-      KEYCLOAK_REALM: talentum
+      KEYCLOAK_HOST: http://192.168.20.27:8080
+      KEYCLOAK_REALM: aulas-valle
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://192.168.121.150:4000
-      NEXTAUTH_URL: http://192.168.121.150:3000
+      NEXT_PUBLIC_BACKEND: http://192.168.20.27:4000
+      NEXTAUTH_URL: http://192.168.20.27:3000
     ports: 
       - "3000:3000"
     depends_on:
       - backend
       - keycloak
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
 
   moodle:
     image: docker.io/bitnami/moodle:4
-    container_name: talentum_moodle
+    container_name: aulas_valle_moodle
     restart: always
     environment:
       MOODLE_DATABASE_TYPE: mysqli
@@ -150,7 +150,7 @@ services:
     depends_on:
       - databases
     networks:
-      - bilinguismo-network
+      - aulas-valle-network
     volumes:
       - './moodle/moodle_data:/bitnami/moodle'
       - 'moodledata_data:/bitnami/moodledata'
@@ -162,5 +162,5 @@ volumes:
     driver: local
 
 networks:
-  bilinguismo-network:
+  aulas-valle-network:
     driver: bridge
