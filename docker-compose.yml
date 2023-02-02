@@ -102,7 +102,7 @@ services:
       - aulas-valle-net
 
   moodle:
-    image: docker.io/bitnami/moodle:4
+    image: bitnami/moodle:4.1.0-debian-11-r7
     container_name: aulas_valle_moodle
     restart: always
     extra_hosts:
