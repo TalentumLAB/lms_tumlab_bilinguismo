@@ -1,6 +1,6 @@
 {
-  "id": "aulas-valle",
-  "realm": "aulas-valle",
+  "id": "aulas-steam",
+  "realm": "aulas-steam",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -48,7 +48,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-valle",
+        "containerId": "aulas-steam",
         "attributes": {}
       },
       {
@@ -56,7 +56,7 @@
         "name": "uma_authorization",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-valle",
+        "containerId": "aulas-steam",
         "attributes": {}
       },
       {
@@ -65,7 +65,7 @@
         "description": "Demo role",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-valle",
+        "containerId": "aulas-steam",
         "attributes": {}
       }
     ],
@@ -433,7 +433,7 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/aulas-valle/account/",
+      "baseUrl": "/realms/aulas-steam/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -444,7 +444,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/realms/aulas-valle/account/*"
+        "/realms/aulas-steam/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -497,14 +497,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/aulas-valle/account/",
+      "baseUrl": "/realms/aulas-steam/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "31348d01-14ea-43ff-9eeb-8b5702d5c68a",
       "redirectUris": [
-        "/realms/aulas-valle/account/*"
+        "/realms/aulas-steam/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -669,14 +669,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/aulas-valle/console/",
+      "baseUrl": "/admin/aulas-steam/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "ce562a89-33ce-4b1a-ab54-a5971bed722b",
       "redirectUris": [
-        "/admin/aulas-valle/console/*"
+        "/admin/aulas-steam/console/*"
       ],
       "webOrigins": [
         "+"
@@ -761,7 +761,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "login_theme": "aulas-valle-v1.0.0",
+        "login_theme": "aulas_steam_balboa",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
@@ -829,7 +829,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "login_theme": "aulas-valle-v1.0.0",
+        "login_theme": "aulas_steam_balboa",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
@@ -897,7 +897,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "login_theme": "aulas-valle-v1.0.0",
+        "login_theme": "aulas_steam_balboa",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
@@ -1448,10 +1448,10 @@
     "from": "noreply@localhost",
     "ssl": ""
   },
-  "loginTheme": "aulas-valle-v1.0.0",
-  "accountTheme": "aulas-valle-v1.0.0",
-  "adminTheme": "aulas-valle-v1.0.0",
-  "emailTheme": "aulas-valle-v1.0.0",
+  "loginTheme": "aulas_steam_balboa",
+  "accountTheme": "aulas_steam_balboa",
+  "adminTheme": "aulas_steam_balboa",
+  "emailTheme": "aulas_steam_balboa",
   "eventsEnabled": false,
   "eventsListeners": [
     "jboss-logging"
