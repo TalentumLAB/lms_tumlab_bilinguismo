@@ -75,7 +75,7 @@ services:
       KEYCLOAK_DB_PASSWORD: Bilinguismo2022*
       KEYCLOAK_DB_NAME: keycloak
     ports:
-      - "4000:4000"
+      - "4001:4000"
     depends_on:
       - keycloak
     networks:
@@ -89,9 +89,9 @@ services:
       KEYCLOAK_CLIENT_ID: si-frontend
       KEYCLOAK_CLIENT_SECRET: 616a597f-2af2-409d-bbd6-f5a0787d90d7
       KEYCLOAK_HOST: http://tumlab.local:8080
-      KEYCLOAK_REALM: aulas-steam
+      KEYCLOAK_REALM: aulas_steam_balboa
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://tumlab.local:4000
+      NEXT_PUBLIC_BACKEND: http://tumlab.local:4001
       NEXTAUTH_URL: http://tumlab.local:3000
     ports: 
       - "3000:3000"
