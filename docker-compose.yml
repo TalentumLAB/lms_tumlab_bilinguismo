@@ -63,7 +63,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
-      JWKS_URI: http://tumlab.local:8080/auth/realms/aulas-steam/protocol/openid-connect/certs
+      JWKS_URI: http://tumlab.local:8080/auth/realms/aulas_steam_balboa/protocol/openid-connect/certs
       DB_HOST: host.docker.internal
       DB_PORT: 3306
       DB_USER: bilinguismo-db-user

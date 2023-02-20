@@ -1,6 +1,6 @@
 {
-  "id": "aulas-steam",
-  "realm": "aulas-steam",
+  "id": "aulas_steam_balboa",
+  "realm": "aulas_steam_balboa",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -48,7 +48,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-steam",
+        "containerId": "aulas_steam_balboa",
         "attributes": {}
       },
       {
@@ -56,7 +56,7 @@
         "name": "uma_authorization",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-steam",
+        "containerId": "aulas_steam_balboa",
         "attributes": {}
       },
       {
@@ -65,7 +65,7 @@
         "description": "Demo role",
         "composite": false,
         "clientRole": false,
-        "containerId": "aulas-steam",
+        "containerId": "aulas_steam_balboa",
         "attributes": {}
       }
     ],
@@ -433,7 +433,7 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/aulas-steam/account/",
+      "baseUrl": "/realms/aulas_steam_balboa/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -444,7 +444,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/realms/aulas-steam/account/*"
+        "/realms/aulas_steam_balboa/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -497,14 +497,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/aulas-steam/account/",
+      "baseUrl": "/realms/aulas_steam_balboa/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "31348d01-14ea-43ff-9eeb-8b5702d5c68a",
       "redirectUris": [
-        "/realms/aulas-steam/account/*"
+        "/realms/aulas_steam_balboa/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -669,14 +669,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/aulas-steam/console/",
+      "baseUrl": "/admin/aulas_steam_balboa/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "ce562a89-33ce-4b1a-ab54-a5971bed722b",
       "redirectUris": [
-        "/admin/aulas-steam/console/*"
+        "/admin/aulas_steam_balboa/console/*"
       ],
       "webOrigins": [
         "+"
