@@ -88,11 +88,11 @@ services:
       - aulas-valle-network
 
   backend:
-    image: bilinguismotalentum/backend:1.0.0
+    image: bilinguismotalentum/backend:1.0.1
     container_name: aulas_valle_reporter_backend
     restart: always
     environment:
-      JWKS_URI: http://192.168.20.27:8080/auth/realms/aulas-valle/protocol/openid-connect/certs
+      JWKS_URI: http://tumlab.local:8080/auth/realms/aulas_steam_balboa/protocol/openid-connect/certs
       DB_HOST: databases
       DB_PORT: 3306
       DB_USER: bilinguismo-user
@@ -119,11 +119,11 @@ services:
     environment:
       KEYCLOAK_CLIENT_ID: si-frontend
       KEYCLOAK_CLIENT_SECRET: 616a597f-2af2-409d-bbd6-f5a0787d90d7
-      KEYCLOAK_HOST: http://192.168.20.27:8080
-      KEYCLOAK_REALM: aulas-valle
+      KEYCLOAK_HOST: http://tumlab.local:8080
+      KEYCLOAK_REALM: aulas_steam_balboa
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://192.168.20.27:4000
-      NEXTAUTH_URL: http://192.168.20.27:3000
+      NEXT_PUBLIC_BACKEND: http://tumlab.local:4000
+      NEXTAUTH_URL: http://tumlab.local:3000
     ports: 
       - "3000:3000"
     depends_on:
