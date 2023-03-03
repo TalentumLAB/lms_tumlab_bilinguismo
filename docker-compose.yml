@@ -121,8 +121,8 @@ services:
     networks:
       - aulas-steam-net
     volumes:
-      - './moodle/moodledata:/bitnami/moodledata'
-      - './moodle/moodle:/bitnami/moodle'
+      - '/tumlab/apps/moodle/moodledata:/bitnami/moodledata'
+      - '/tumlab/apps/moodle/moodle:/bitnami/moodle'
     
 # volumes:
 #   moodledata_data:
