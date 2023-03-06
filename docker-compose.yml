@@ -44,7 +44,7 @@ services:
       KEYCLOAK_EXTRA_ARGS: "--import-realm"
 
       KEYCLOAK_LOG_LEVEL: INFO
-      THEME_NAME: aulas_steam_balboa
+      THEME_NAME: aulassteambalboa
     ports:
       - 8080:8080
       - 8443:8443
@@ -57,7 +57,7 @@ services:
       - aulas-steam-net
 
   backend:
-    image: bilinguismotalentum/backend:1.0.0
+    image: bilinguismotalentum/backend:1.0.5
     container_name: aulas_valle_reporter_backend
     restart: always
     extra_hosts:
@@ -75,14 +75,14 @@ services:
       KEYCLOAK_DB_PASSWORD: Bilinguismo2022*
       KEYCLOAK_DB_NAME: keycloak
     ports:
-      - "4001:4000"
+      - "4000:4000"
     depends_on:
       - keycloak
     networks:
       - aulas-steam-net
 
   frontend:
-    image: bilinguismotalentum/frontend:1.0.0
+    image: bilinguismotalentum/frontend:1.0.10
     container_name: aulas_valle_reporter_frontend
     restart: always
     environment:
