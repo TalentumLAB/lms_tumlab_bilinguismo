@@ -68,7 +68,7 @@ services:
       DB_PORT: 3306
       DB_USER: bilinguismo-db-user
       DB_PASSWORD: Bilinguismo2022*
-      DB_NAME: bilinguismo_db
+      DB_DATABASE: bilinguismo_db
       KEYCLOAK_DB_HOST: host.docker.internal
       KEYCLOAK_DB_PORT: 5432
       KEYCLOAK_DB_USER: bilinguismo_db_user
@@ -91,7 +91,7 @@ services:
       KEYCLOAK_HOST: http://tumlab.local:8080
       KEYCLOAK_REALM: aulassteambalboa
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://tumlab.local:4001
+      NEXT_PUBLIC_BACKEND: http://tumlab.local:4000
       NEXTAUTH_URL: http://tumlab.local:3000
     ports: 
       - "3000:3000"
